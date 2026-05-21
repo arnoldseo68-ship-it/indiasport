@@ -1,0 +1,541 @@
+```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="R6ObE1d25KgyaIQe1qmn1_vK0kjsS8YTN5hI2sSKbRU" />
+<meta name="robots" content="index, follow">
+<meta name="description" content="India Sport भारत का आधुनिक स्पोर्ट्स प्लेटफॉर्म है जहाँ आपको क्रिकेट, फुटबॉल, कबड्डी, फिटनेस, एथलेटिक्स, स्पोर्ट्स कल्चर और खिलाड़ियों की प्रेरणादायक कहानियाँ मिलती हैं।">
+<meta name="keywords" content="India Sport, भारतीय खेल, क्रिकेट, फुटबॉल, कबड्डी, फिटनेस, एथलीट, स्पोर्ट्स न्यूज़, खेल संस्कृति">
+<meta name="author" content="India Sport">
+<title>India Sport - Ultimate Sports Experience</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#050816;
+color:#ffffff;
+overflow-x:hidden;
+line-height:1.9;
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at top left,#6a11cb33,transparent 30%),
+radial-gradient(circle at bottom right,#2575fc33,transparent 30%),
+radial-gradient(circle at center,#00f2fe22,transparent 45%);
+z-index:-2;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+background:linear-gradient(135deg,#0f172a,#111827,#1e1b4b);
+position:relative;
+overflow:hidden;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:linear-gradient(45deg,#00f2fe,#4facfe,#6a11cb);
+filter:blur(120px);
+opacity:0.3;
+border-radius:50%;
+animation:float 8s infinite alternate;
+}
+
+@keyframes float{
+from{transform:translateY(-20px) translateX(-20px);}
+to{transform:translateY(40px) translateX(40px);}
+}
+
+.hero h1{
+font-size:5rem;
+font-weight:900;
+background:linear-gradient(90deg,#00f2fe,#4facfe,#6a11cb,#ff00cc);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:25px;
+text-shadow:0 0 30px rgba(255,255,255,0.2);
+position:relative;
+z-index:2;
+}
+
+.hero p{
+max-width:1000px;
+font-size:1.3rem;
+color:#d1d5db;
+position:relative;
+z-index:2;
+}
+
+.container{
+width:90%;
+max-width:1400px;
+margin:auto;
+padding:80px 0;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+padding:40px;
+border-radius:28px;
+backdrop-filter:blur(18px);
+margin-bottom:40px;
+transition:0.4s ease;
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.06),transparent);
+transform:translateX(-100%);
+transition:0.6s;
+}
+
+.card:hover::before{
+transform:translateX(100%);
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.01);
+box-shadow:0 0 35px rgba(79,172,254,0.35);
+border-color:#4facfe;
+}
+
+h2{
+font-size:2.6rem;
+margin-bottom:25px;
+background:linear-gradient(90deg,#00f2fe,#4facfe,#a855f7);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+p{
+font-size:1.08rem;
+color:#dbe4ff;
+margin-bottom:18px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.feature{
+padding:30px;
+border-radius:24px;
+background:linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03));
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.feature:hover{
+transform:translateY(-10px);
+background:linear-gradient(135deg,#00f2fe22,#4facfe22,#6a11cb22);
+box-shadow:0 0 25px rgba(79,172,254,0.4);
+}
+
+.feature h3{
+font-size:1.6rem;
+margin-bottom:15px;
+color:#ffffff;
+}
+
+.stats{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+margin-top:40px;
+}
+
+.stat-box{
+flex:1;
+min-width:220px;
+background:linear-gradient(135deg,#0f172a,#111827);
+padding:35px;
+border-radius:24px;
+text-align:center;
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.stat-box:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px rgba(168,85,247,0.4);
+}
+
+.stat-box h4{
+font-size:3rem;
+background:linear-gradient(90deg,#00f2fe,#a855f7);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:10px;
+}
+
+.faq-item{
+margin-bottom:25px;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+transition:0.4s;
+}
+
+.faq-item:hover{
+background:linear-gradient(135deg,#00f2fe11,#6a11cb11);
+transform:translateX(8px);
+}
+
+footer{
+padding:60px 20px;
+text-align:center;
+background:#020617;
+margin-top:80px;
+}
+
+footer h3{
+font-size:2rem;
+margin-bottom:20px;
+background:linear-gradient(90deg,#00f2fe,#ff00cc);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.glow-btn{
+display:inline-block;
+padding:16px 38px;
+border-radius:60px;
+background:linear-gradient(90deg,#00f2fe,#4facfe,#6a11cb);
+color:#fff;
+font-weight:bold;
+text-decoration:none;
+transition:0.4s;
+margin-top:20px;
+}
+
+.glow-btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 35px rgba(79,172,254,0.8);
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:3rem;
+}
+
+h2{
+font-size:2rem;
+}
+}
+</style>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Product",
+"name":"India Sport Premium Experience",
+"image":"sports-image.jpg",
+"description":"भारत का आधुनिक स्पोर्ट्स प्लेटफॉर्म जो खेल संस्कृति, फिटनेस और खेल विश्लेषण पर आधारित है।",
+"brand":{
+"@type":"Brand",
+"name":"India Sport"
+},
+"review":{
+"@type":"Review",
+"reviewRating":{
+"@type":"Rating",
+"ratingValue":"5",
+"bestRating":"5"
+},
+"author":{
+"@type":"Person",
+"name":"Sports Enthusiast"
+}
+},
+"aggregateRating":{
+"@type":"AggregateRating",
+"ratingValue":"4.9",
+"reviewCount":"2847"
+},
+"offers":{
+"@type":"Offer",
+"priceCurrency":"INR",
+"price":"499",
+"availability":"https://schema.org/InStock"
+}
+}
+</script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+{
+"@type":"Question",
+"name":"India Sport क्या है?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"India Sport एक आधुनिक स्पोर्ट्स प्लेटफॉर्म है जहाँ भारतीय खेल संस्कृति, फिटनेस और खिलाड़ियों की प्रेरणादायक कहानियाँ प्रस्तुत की जाती हैं।"
+}
+},
+{
+"@type":"Question",
+"name":"क्या यहाँ स्पोर्ट्स एनालिसिस उपलब्ध है?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"हाँ, यहाँ क्रिकेट, फुटबॉल, कबड्डी और अन्य खेलों का विस्तृत विश्लेषण उपलब्ध है।"
+}
+},
+{
+"@type":"Question",
+"name":"क्या India Sport फिटनेस कंटेंट भी प्रदान करता है?",
+"acceptedAnswer":{
+"@type":"Answer",
+"text":"हाँ, प्लेटफॉर्म पर फिटनेस, ट्रेनिंग और एथलीट प्रदर्शन से जुड़ा कंटेंट उपलब्ध है।"
+}
+}
+]
+}
+</script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Organization",
+"name":"India Sport",
+"description":"भारत का प्रीमियम स्पोर्ट्स और फिटनेस प्लेटफॉर्म",
+"aggregateRating":{
+"@type":"AggregateRating",
+"ratingValue":"4.8",
+"reviewCount":"5230"
+}
+}
+</script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"OfferCatalog",
+"name":"India Sport Merchant Listings",
+"itemListElement":[
+{
+"@type":"Offer",
+"itemOffered":{
+"@type":"Service",
+"name":"स्पोर्ट्स एनालिसिस"
+}
+},
+{
+"@type":"Offer",
+"itemOffered":{
+"@type":"Service",
+"name":"फिटनेस गाइड"
+}
+},
+{
+"@type":"Offer",
+"itemOffered":{
+"@type":"Service",
+"name":"एथलीट स्टोरीज"
+}
+}
+]
+}
+</script>
+
+</head>
+<body>
+
+<section class="hero">
+<h1>INDIA SPORT</h1>
+<p>
+भारत की खेल संस्कृति हमेशा से ऊर्जा, जुनून और प्रेरणा का प्रतीक रही है। India Sport एक ऐसा आधुनिक डिजिटल स्पोर्ट्स अनुभव है जहाँ खेल केवल प्रतियोगिता नहीं बल्कि एक जीवनशैली के रूप में प्रस्तुत किए जाते हैं। यहाँ क्रिकेट की रोमांचक दुनिया, फुटबॉल की तेज़ गति, कबड्डी की ताकत, एथलेटिक्स की मेहनत और फिटनेस की नई सोच को एक प्रीमियम अनुभव के रूप में पेश किया जाता है।
+</p>
+<a class="glow-btn">Explore Sports Culture</a>
+</section>
+
+<div class="container">
+
+<div class="card">
+<h2>भारतीय खेलों का नया युग</h2>
+<p>
+भारत में खेल केवल मनोरंजन नहीं बल्कि करोड़ों लोगों की भावनाओं का हिस्सा हैं। हर गली में क्रिकेट खेलते बच्चे, हर मैदान में फुटबॉल का जुनून और हर शहर में फिटनेस की बढ़ती संस्कृति इस बात का प्रमाण है कि खेल भारत की पहचान बन चुके हैं। India Sport इसी पहचान को आधुनिक तकनीक, गहन विश्लेषण और आकर्षक प्रस्तुति के साथ दुनिया के सामने लाता है।
+</p>
+<p>
+आज भारत में खेल उद्योग तेजी से विकसित हो रहा है। डिजिटल प्लेटफॉर्म, प्रोफेशनल ट्रेनिंग और फिटनेस टेक्नोलॉजी ने युवा खिलाड़ियों के लिए नए अवसर बनाए हैं। लोग अब केवल मैच देखने तक सीमित नहीं हैं बल्कि खेल रणनीतियों, खिलाड़ियों की मानसिक तैयारी और प्रदर्शन विश्लेषण में भी रुचि ले रहे हैं। India Sport इस नई पीढ़ी को वह जानकारी और प्रेरणा प्रदान करता है जिसकी उन्हें आवश्यकता है।
+</p>
+<p>
+क्रिकेट भारत का सबसे लोकप्रिय खेल है लेकिन इसके अलावा फुटबॉल, बैडमिंटन, टेनिस, कुश्ती और कबड्डी जैसे खेलों ने भी अपनी अलग पहचान बनाई है। नए खिलाड़ियों की कहानियाँ और उनकी संघर्ष यात्रा युवाओं को प्रेरित करती हैं कि वे भी अपने सपनों को पूरा करने के लिए मेहनत करें।
+</p>
+</div>
+
+<div class="grid">
+<div class="feature">
+<h3>क्रिकेट एनालिसिस</h3>
+<p>
+मैच रणनीति, खिलाड़ी प्रदर्शन, आंकड़े और आधुनिक क्रिकेट संस्कृति पर विस्तृत जानकारी।
+</p>
+</div>
+
+<div class="feature">
+<h3>फुटबॉल कल्चर</h3>
+<p>
+भारतीय फुटबॉल के विकास, युवा प्रतिभाओं और अंतरराष्ट्रीय प्रभाव का आधुनिक दृष्टिकोण।
+</p>
+</div>
+
+<div class="feature">
+<h3>फिटनेस ट्रेंड</h3>
+<p>
+नई पीढ़ी के लिए फिटनेस, ट्रेनिंग, रिकवरी और हेल्दी लाइफस्टाइल से जुड़ी प्रीमियम जानकारी।
+</p>
+</div>
+</div>
+
+<div class="card">
+<h2>स्पोर्ट्स और फिटनेस का भविष्य</h2>
+<p>
+डिजिटल युग में खेलों का स्वरूप तेजी से बदल रहा है। अब खिलाड़ी केवल मैदान पर ही नहीं बल्कि टेक्नोलॉजी, डेटा और साइंस की मदद से अपने प्रदर्शन को बेहतर बना रहे हैं। फिटनेस ट्रैकिंग, स्मार्ट ट्रेनिंग और डेटा एनालिसिस जैसे आधुनिक साधन खिलाड़ियों को नई ऊँचाइयों तक पहुँचाने में मदद कर रहे हैं।
+</p>
+<p>
+India Sport का उद्देश्य केवल समाचार देना नहीं बल्कि एक ऐसा अनुभव बनाना है जहाँ पाठक खेलों को गहराई से समझ सकें। यहाँ हर लेख को इस तरह तैयार किया जाता है कि वह जानकारीपूर्ण होने के साथ प्रेरणादायक भी हो। खेलों की दुनिया में मानसिक शक्ति, अनुशासन और निरंतर अभ्यास का महत्व बहुत अधिक है और यही संदेश इस प्लेटफॉर्म के माध्यम से प्रस्तुत किया जाता है।
+</p>
+<p>
+आज के युवा फिटनेस को अपनी जीवनशैली का हिस्सा बना रहे हैं। जिम ट्रेनिंग, रनिंग, योग और प्रोफेशनल स्पोर्ट्स ट्रेनिंग के प्रति लोगों की रुचि लगातार बढ़ रही है। खेलों ने लोगों को न केवल शारीरिक रूप से मजबूत बनाया है बल्कि मानसिक रूप से भी आत्मविश्वासी बनाया है।
+</p>
+</div>
+
+<div class="stats">
+<div class="stat-box">
+<h4>4.9★</h4>
+<p>उपयोगकर्ता रेटिंग</p>
+</div>
+
+<div class="stat-box">
+<h4>5000+</h4>
+<p>स्पोर्ट्स रिव्यू</p>
+</div>
+
+<div class="stat-box">
+<h4>24/7</h4>
+<p>स्पोर्ट्स अपडेट</p>
+</div>
+
+<div class="stat-box">
+<h4>100%</h4>
+<p>प्रीमियम अनुभव</p>
+</div>
+</div>
+
+<div class="card">
+<h2>भारतीय युवाओं की प्रेरणा</h2>
+<p>
+भारत के युवा आज पहले से कहीं अधिक खेलों के प्रति जागरूक हैं। वे अंतरराष्ट्रीय खिलाड़ियों से प्रेरणा लेते हैं और अपनी मेहनत से नई पहचान बनाने का सपना देखते हैं। छोटे शहरों से निकलकर अंतरराष्ट्रीय स्तर तक पहुँचने वाले खिलाड़ियों की कहानियाँ पूरे देश को प्रेरित करती हैं।
+</p>
+<p>
+India Sport इन प्रेरणादायक कहानियों को आधुनिक डिजिटल प्रस्तुति के साथ सामने लाता है। यहाँ केवल सफलता की कहानी नहीं बल्कि संघर्ष, मेहनत और अनुशासन की वास्तविक यात्रा को दर्शाया जाता है। यह प्लेटफॉर्म हर उस युवा के लिए प्रेरणा का स्रोत है जो खेलों में अपना भविष्य बनाना चाहता है।
+</p>
+<p>
+फिटनेस और खेलों का संबंध बहुत गहरा है। एक सफल खिलाड़ी बनने के लिए शारीरिक फिटनेस के साथ मानसिक संतुलन भी आवश्यक है। इसलिए आधुनिक एथलीट ध्यान, योग और मानसिक प्रशिक्षण को भी अपनी दिनचर्या का हिस्सा बना रहे हैं।
+</p>
+<p>
+भारत में खेलों का भविष्य अत्यंत उज्ज्वल है। नई अकादमियाँ, प्रोफेशनल कोचिंग और अंतरराष्ट्रीय अवसर खिलाड़ियों को वैश्विक मंच तक पहुँचने का अवसर दे रहे हैं। आने वाले वर्षों में भारत खेलों की दुनिया में और भी बड़ी शक्ति बनकर उभरेगा।
+</p>
+</div>
+
+<div class="card">
+<h2>FAQ - सामान्य प्रश्न</h2>
+
+<div class="faq-item">
+<h3>India Sport किस प्रकार का प्लेटफॉर्म है?</h3>
+<p>
+यह एक आधुनिक स्पोर्ट्स और फिटनेस प्लेटफॉर्म है जहाँ खेल संस्कृति, खिलाड़ियों की कहानियाँ और खेल विश्लेषण प्रस्तुत किया जाता है।
+</p>
+</div>
+
+<div class="faq-item">
+<h3>क्या यहाँ फिटनेस से जुड़ी जानकारी मिलती है?</h3>
+<p>
+हाँ, फिटनेस ट्रेनिंग, रिकवरी, हेल्दी लाइफस्टाइल और प्रदर्शन सुधार से जुड़ी जानकारी उपलब्ध है।
+</p>
+</div>
+
+<div class="faq-item">
+<h3>क्या यह प्लेटफॉर्म केवल क्रिकेट पर आधारित है?</h3>
+<p>
+नहीं, यहाँ क्रिकेट के अलावा फुटबॉल, कबड्डी, एथलेटिक्स और कई अन्य खेलों को भी शामिल किया गया है।
+</p>
+</div>
+</div>
+
+<div class="card">
+<h2>आधुनिक स्पोर्ट्स कल्चर</h2>
+<p>
+आधुनिक स्पोर्ट्स कल्चर केवल खेल तक सीमित नहीं है। यह फैशन, फिटनेस, टेक्नोलॉजी और डिजिटल मीडिया का मिश्रण बन चुका है। खिलाड़ी अब केवल मैदान तक सीमित नहीं हैं बल्कि सोशल मीडिया और डिजिटल प्लेटफॉर्म के माध्यम से करोड़ों लोगों को प्रेरित कर रहे हैं।
+</p>
+<p>
+India Sport इसी नई डिजिटल स्पोर्ट्स संस्कृति को शानदार डिजाइन और आकर्षक अनुभव के साथ प्रस्तुत करता है। यहाँ हर सेक्शन को इस तरह डिजाइन किया गया है कि उपयोगकर्ता को प्रीमियम अनुभव महसूस हो। आधुनिक ग्रेडिएंट, नियोन होवर इफेक्ट और इंटरैक्टिव डिजाइन इसे भविष्य की स्पोर्ट्स वेबसाइट जैसा अनुभव देते हैं।
+</p>
+<p>
+खेलों का प्रभाव समाज पर भी गहरा पड़ता है। यह अनुशासन, टीमवर्क और आत्मविश्वास सिखाते हैं। भारत जैसे युवा देश में खेलों का महत्व और भी बढ़ जाता है क्योंकि यह नई पीढ़ी को सकारात्मक दिशा प्रदान करते हैं।
+</p>
+<p>
+स्पोर्ट्स इंडस्ट्री आज दुनिया के सबसे तेजी से बढ़ते उद्योगों में से एक है। ब्रांड, डिजिटल मीडिया और फिटनेस कंपनियाँ खेलों के साथ जुड़कर नए अवसर बना रही हैं। आने वाले समय में स्पोर्ट्स और टेक्नोलॉजी का यह संयोजन और भी मजबूत होगा।
+</p>
+</div>
+
+</div>
+
+<footer>
+<h3>India Sport</h3>
+<p>
+भारत की खेल भावना, आधुनिक फिटनेस संस्कृति और प्रेरणादायक एथलीट कहानियों का प्रीमियम डिजिटल अनुभव।
+</p>
+<a class="glow-btn">Future of Indian Sports</a>
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card,.feature,.stat-box');
+
+cards.forEach(card=>{
+card.addEventListener('mousemove',(e)=>{
+const rect = card.getBoundingClientRect();
+const x = e.clientX - rect.left;
+const y = e.clientY - rect.top;
+card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(79,172,254,0.18), rgba(255,255,255,0.05))`;
+});
+
+card.addEventListener('mouseleave',()=>{
+card.style.background = 'rgba(255,255,255,0.05)';
+});
+});
+</script>
+
+</body>
+</html>
+```
